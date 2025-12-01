@@ -27,3 +27,10 @@ git remote -v
 ```
 git push -u origin main
 ```
+`-u` = --set-upstream 
+
+意思是以后这个本地分支（main）默认对应那个远程分支（origin/main）
+
+`origin`远程仓库的名字
+
+`main`要推送的分支名。
