@@ -1,6 +1,51 @@
 ## VSCode快捷键
 注释 Ctrl + /
 
+## for of & for in
+for of 每次得到的是元素本身
+```
+const arr = [10, 20, 30];
+
+for (const num of arr) {
+  console.log(num); // 10, 20, 30
+}
+```
+
+for…in 遍历的是 索引/属性名，不是元素本身
+```
+// 对象
+const obj = {a: 1, b: 2, c: 3};
+
+for (const key in obj) {
+  console.log(key, obj[key]); // a 1, b 2, c 3
+}
+
+// 数组
+const arr = [10, 20, 30];
+
+for (const index in arr) {
+  console.log(index, arr[index]); // 0 10, 1 20, 2 30
+}
+```
+
+## forEach
+forEach的三个参数起名可以随便，但是顺序固定：元素，索引，数组
+```
+var arr=[5,2,6,4,7];
+
+arr.forEach((element, index, array) => {
+  console.log(index, element);
+});
+
+arr.forEach((element, index) => {
+  console.log(index, element);
+});
+
+ arr.forEach(element => {
+    console.log(element)
+});
+```
+
 ## 运算符
 ```
 var a = 100
