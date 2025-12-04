@@ -46,3 +46,38 @@ function changeColor(){
             }
         }
 ```
+
+## 删除元素
+`tbody.removeChild(trObj)`
+
+父元素删除子元素 
+```
+function deleteInfo(thisButton){
+    console.log(thisButton)
+    var trObj=thisButton.parentNode.parentNode
+    
+    var tbody =document.getElementById('mailTboby')
+    tbody.removeChild(trObj)
+
+    changeColor()
+}
+```
+
+## 更新元素
+`var trObj=thisButton.parentNode.parentNode`
+
+找到要修改的节点
+
+`trObj.children[0].innerHTML=prompt('请输入新的姓名')`
+
+从大的父节点定位要修改的子节点
+
+```
+function updateInfo(thisButton){ 
+    console.log(thisButton)
+    var trObj=thisButton.parentNode.parentNode
+    
+    trObj.children[0].innerHTML=prompt('请输入新的姓名')
+    trObj.children[1].innerHTML=prompt('请输入新的邮箱')
+}
+```
