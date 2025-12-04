@@ -28,3 +28,21 @@ const el = document.getElementById("myId");
 var obj = document.getElementById('textID');
 obj.value = "Hello World"
 ```
+
+
+## 元素奇偶变色
+寻找子类 `.children`
+
+改变样式 `.style='background-color:` 
+```
+function changeColor(){
+            var allTrObj = document.getElementById('mailTboby').children
+            for (let index = 0; index < allTrObj.length; index++) {
+                if(index % 2==0){
+                    allTrObj[index].style='background-color: beige;'
+                }else{
+                    allTrObj[index].style='background-color: lightgrey;'
+                }
+            }
+        }
+```
