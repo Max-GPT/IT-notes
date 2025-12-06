@@ -32,7 +32,7 @@ MD文件写法
 
 <mark>使用 mark标签 显示高亮文本</mark>
 
-引号: emoji代码 引号: ，显示emoji :smile:
+引号 emoji代码 引号 ，显示emoji :smile:
 
 引用
 ---
