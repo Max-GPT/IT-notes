@@ -1,5 +1,108 @@
 # Java 学习笔记
 
+## 基本类型的<mark>包装类</mark>
+八个基本类型是 非对象，不能直接用于许多 需要对象 的场景，所以需要 包装类（Wrapper Class）。
+| 基本类型    | 包装类       |
+| ------- | --------- |
+| int     | Integer   |
+| double  | Double    |
+| boolean | Boolean   |
+| char    | Character |
+| 其他同理    | 
+ 
+包装类的意义
+
+1. 让基本类型可以当对象使用
+```
+List<int> list; // ❌ 不允许
+List<Integer> list; // ✔ 用包装类
+```
+2. 提供丰富的工具方法
+```
+Integer.parseInt("123");
+Boolean.parseBoolean("true");
+Double.isNaN(x);
+```
+3. 支持 null
+```
+Integer count = null; // ✔ 允许
+int count = null;     // ❌ 不允许
+```
+
+## 自动拆箱 自动装箱
+指 基本类型 / 包装类 之间互相转换
+```
+Integer a = 10; // 自动把 int 10 转成 Integer.valueOf(10)
+Integer a = Integer.valueOf(10); // 相当于：
+```
+```
+
+int b = a;            // 自动拆箱，相当于 a.intValue()
+int b = a.intValue(); // 相当于：
+```
+
+ 
+## 数组常用方法
+- 输出 Arrays.toString(arr)
+- 排序 Arrays.sort(arr)
+- 查找 Arrays.binarySearch(arr,key)
+- 复制 Arrays.copyOf(arr,newLength)
+- 比较 Arrays.euqals(arr1,arr2)
+- 填充 Arrays.fill(arr,val)
+
+## 快速输出数组
+```
+// 控制台输出数组 arr
+System.out.println(Arrays.toString(arr));
+```
+
+## 比较数组
+如果使用 == 比较数组，比较的是数组的地址，结果为false
+
+要使用 `Arrays.equals( a , b )`
+
+## 数组的 foreach 遍历
+```
+int[] numbers = {1, 2, 3, 4, 5};
+
+for (int n : numbers) {
+    System.out.println(n);
+}
+```
+```
+for (类型 变量名 : 数组名) {
+    // 使用变量名
+}
+```
+foreach 不能做这些：
+- 不能通过索引访问元素（比如 arr[i]）
+- 不能直接删除元素
+- 不能修改数组长度（数组本来就固定长度）
+
+
+## 实例变量 局部变量 静态变量
+| 位置          | 名称                       | 特点        |
+| ----------- | ------------------------ | --------- |
+| **类里（方法外）** | **实例变量**（没有 static）      | 每个对象一份    |
+| **类里（方法外）** | **类变量**（static 变量）       | 全类共享一份    |
+| **方法内部**    | **局部变量（local variable）** | 方法结束后自动消失 |
+
+
+## 三元运算符
+```
+int age = 20;
+String type = age >= 18 ? "adult" : "child";
+```
+三元运算符可以嵌套，比如：
+```
+int score = 85;
+String grade = score >= 90 ? "A" :
+               score >= 80 ? "B" :
+               score >= 70 ? "C" : "D";
+
+System.out.println(grade); // B
+```
+
 ## 逻辑运算符 短路运算
 | 运算符 | 名称            | 是否短路 | 用途                     |
 |--------|------------------|----------|---------------------------|
