@@ -14,3 +14,9 @@
 
 ## `.metadata` 
 `.metadata` 文件夹是 工作空间 workspace 下自动生成的核心配置目录，非常重要。
+
+
+## sysout
+`sysout` + `alt` + `/`
+
+`System.out.println();`
