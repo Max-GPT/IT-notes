@@ -100,11 +100,23 @@ Map<KeyType, ValueType> map = new HashMap<>();
 ```
 ### HashMap 最常用操作
 ✔ `put( )` — 添加数据
+
+✔ `putIfAbsent()` — 检测重复并添加数据  Absent 缺席
 ```
 Map<String, String> map = new HashMap<>();
 map.put("A001", "电脑");
 map.put("A002", "手机");
+
+map.putIfAbsent("A001", "电脑");
+map.putIfAbsent("A001", "手机"); // 不会覆盖！
 ```
+✔ keySet() — 返回所有 key 的集合 Set<K>
+
+✔ values() — 返回所有 value 的集合 Collection<V>
+
+✔ entrySet() — 返回 key + value 的键值对集合
+`set<Map.Entry<K,V>>`
+
 ✔ `get()` — 根据 key 获取 value
 ```
 String p = map.get("A001");

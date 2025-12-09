@@ -1,5 +1,15 @@
 # Java 学习笔记
 
+## 静态变量 实例变量 都可以在定义时直接赋值
+```
+private static HashMap<String, Supplier> suppliers = new HashMap<>();
+```
+```
+private int stock = 100;
+private String category = "未知";
+private HashMap<String, String> data = new HashMap<>();
+```
+
 ## 成员 / 局部 / 实例 / 静态 变量
 | 位置          | 名称                       | 特点        |
 | ----------- | ------------------------ | --------- |
