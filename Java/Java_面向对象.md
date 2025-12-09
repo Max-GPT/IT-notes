@@ -1,4 +1,24 @@
 ## 抽象类
+
+### <mark>泛型</mark>
+泛型的核心作用是：
+
+让集合 “只装特定类型的元素” ，并在编译期保证类型安全
+```
+ArrayList<String> list = new ArrayList<>();
+```
+`String`表示这个 ArrayList 只能存放 String
+```
+list.add("hello");  // ✔
+list.add(123);      // ❌ 编译时报错
+```
+泛型可以简写
+```
+ArrayList<String> list = new ArrayList<>();
+
+ArrayList<String> list = new ArrayList<String>();
+```
+
 ### 接口、抽象类、父类都可以用来声明变量（引用变量）
 Java 中，变量的类型可以是：接口、抽象类、普通父类、具体类。
 
