@@ -1,8 +1,37 @@
 ## MySQL
 SQL = Structured Query Language  结构化查询语句
 
-
 A5M2 (エーゴエムツー)
+
+## SQL 语法
+[BETWEEN AND](#BETWEEN AND)
+
+[IN](#IN)
+
+## BETWEEN AND
+```
+-- 查询年龄在 18 到 30 岁之间的用户
+SELECT * FROM users
+WHERE age BETWEEN 18 AND 30;
+```
+```
+-- 查询年龄不在 18 到 30 岁之间的用户
+SELECT * FROM users
+WHERE age NOT BETWEEN 18 AND 30;
+```
+
+## IN
+```
+-- 查询城市在北京、上海、广州的用户
+SELECT * FROM users
+WHERE city IN ('北京', '上海', '广州');
+```
+```
+-- 查询城市不是北京、上海、广州的用户
+SELECT * FROM users
+WHERE city NOT IN ('北京', '上海', '广州');
+```
+
 
 ### 注释
 `-- SQL注释`
