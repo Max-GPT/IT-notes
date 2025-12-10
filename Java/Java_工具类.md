@@ -3,7 +3,13 @@
 
 [HashMap](#hashmap)
 
-## <mark>ArrayList</mark>
+## 常用容器的长度获取方法
+- 数组：`.length`
+- 字符串：`.length()`
+- 集合（List / Map / Set）：`.size()`
+
+## <mark>ArrayList</mark> 
+
 动态数组（可改变长度的数组）。
 - 会自动扩容
 - 可以随意添加、删除、修改、查询元素
@@ -13,7 +19,13 @@
 ```
 List<String> list = new ArrayList<>();
 ```
-ArrayList 常用操作
+## 错误点 
+### 把一个 list 里的数据添加到另一个 list 
+ addAll 想打碎它，把里面的东西倒进去
+ 
+ add 保留 List 这个壳（list 作为一个单独元素）
+
+###  ArrayList 常用操作
 1. 添加元素：`add()`
 ```
 list.add("apple");
@@ -23,6 +35,13 @@ list.add("orange");
 2. 指定位置插入元素: `add()`
 ```
 list.add(1, "pear"); // 在索引 1 插入
+```
+有时候用add一个一个添加会很啰嗦。
+
+asList可以一次添加。
+
+```
+List<String> list = Arrays.asList("A", "B", "C");
 ```
 3. 获取元素：`get()`
 ```
