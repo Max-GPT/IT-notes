@@ -4,7 +4,7 @@ SQL = Structured Query Language  结构化查询语句
 A5M2 (エーゴエムツー)
 
 ## SQL 语法
-[BETWEEN AND](#BETWEEN AND)
+[BETWEEN AND](#BETWEEN-AND)
 
 [IN](#IN)
 
