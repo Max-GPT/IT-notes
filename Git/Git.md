@@ -1,5 +1,12 @@
 ## 第一次 Git 上传流程
 
+### 核心区域概念
+
+- 工作区（修改文件） → git add → 
+- 暂存区（准备提交） → git commit → 
+- 本地仓库（永久保存）→ git push → 
+- 远程仓库（Github）
+
 ### 1. 配置用户名邮箱
 ```
 git config --global user.name "你的名字"
