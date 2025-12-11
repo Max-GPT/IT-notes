@@ -8,6 +8,21 @@ A5M2 (エーゴエムツー)
 
 [IN](#IN)
 
+## 聚合函数
+如果没有聚合函数而直接 SELECT 其他列，MySQL 会返回 分组中某一行的值（不保证顺序）
+
+## HAVING 与 WHERE 区别
+
+WHERE → 筛选原始数据
+
+HAVING → 筛选分组后的结果
+```
+SELECT customer, SUM(amount) AS total_amount
+FROM orders
+GROUP BY customer
+HAVING total_amount > 200;
+```
+
 ## 多表查询 连接方式
 | 连接类型 | SQL 语法示例 | 返回结果 | 说明 |
 |----------|--------------|----------|------|
