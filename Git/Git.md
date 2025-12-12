@@ -1,4 +1,51 @@
-## 第一次 Git 上传流程
+# Git命令
+[ArrayList](#ArrayList)
+
+- git clone
+- git branch -a
+- git fetch
+- git branch 新分支 远程分支
+- git cheakout
+- clear
+
+
+## 本地分支 ≠ 远程分支 默认完全没有关系!
+- 即使名字一样，也不能自动同步。
+- 它们就像两个同名但不认识的“人”，你不牵线它们永远不会互相知道。
+- 本地分支（local branch）
+- 远程分支（remote branch）
+
+### 如何关联本地分支和远程分支
+#### 1. 从远程 checkout
+```
+git switch feature/ni_20251212
+```
+（Git 会自动创建本地分支并关联远程）
+
+#### 2. 从远程 checkout
+```
+git checkout -b feature/ni_20251212 origin/feature/ni_20251212
+```
+```
+git branch -u origin/feature/ni_20251212
+```
+把本地的 feature 分支和远程的关联起来
+
+#### 3. 你本地创建后第一次 push
+```
+git push -u origin feature/ni_20251212
+```
+-u 就是“帮我绑定这两个分支，以后 push/pull 都知道去哪”。
+#### 检查是否tracking成功
+```
+git branch -vv
+```
+结果
+```
+* feature/ni_20251212 ddcbb34 [origin/feature/ni_20251212] 项目初期化
+  main                ddcbb34 [origin/main] 项目初期化
+
+```
 
 ## 　`origin`
 - GitLab 远程仓库 = 一个服务器
@@ -70,6 +117,7 @@ main ──────●────────●────────●
 - 本地仓库（永久保存）→ git push → 
 - 远程仓库（Github）
 
+## 第一次 Git 上传流程
 ### 1. 配置用户名邮箱
 ```
 git config --global user.name "你的名字"
